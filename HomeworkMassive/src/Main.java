@@ -2,15 +2,13 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-int [] data = {1,2,3,4,5,6,7,8,9,10};
-int result = data.length;
-for (int index = 0;index < 8; index++)
-        System.out.println(Math.random());
-        System.out.println(data[2]);
-        data[2] = 0;
-        data[4] = 0;
-        data[6] = 0;
-        data[8] = 0;
-        System.out.println(result);
+        int[] data = new int[8];
+        int result = data.length;
+        for (int index = 0; index < result; index++) {
+            System.out.println(index);//внутри цикла сгенерировать случ число от 1 до 10 и присвоить его элементу массива
+            int n = 8;
+            System.out.println (Math.round(Math.random()*(n*2))-n);
+        }//след задача заменить уже в заполненном массиве каждый элемент с нечетным индексом на 0.
+
     }
 }

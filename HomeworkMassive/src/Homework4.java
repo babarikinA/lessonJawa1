@@ -7,6 +7,11 @@ public class Homework4 {
             array[i] = (int) (Math.random() * 10);// не доконца понял внутри ковычек [i]
             System.out.println((array[i]) + 1);//заработало(от 1 до 10 когда добавил +1)
         }
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 1) {
+                array[i] = 0;
+            }
+        }
         //нужно вывести массив в строку
         System.out.println(Arrays.toString(array));//теперь массив выводиться в строку 1 раз
         //исправил так как {саут был в теле цикла}

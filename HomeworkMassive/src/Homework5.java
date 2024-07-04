@@ -1,6 +1,6 @@
 public class Homework5 {
     public static void main(String[] args) {
-            int a = (int) (Math.random()*150+5);//не получается перевести в раунд
+            long a = Math.round(Math.random()*150+5);//не получается перевести в раунд
             if (a>=25) {
                 if (a <= 100) {
                     System.out.println("Число содержиться в интервале");

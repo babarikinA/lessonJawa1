@@ -1,17 +1,15 @@
 public class Homework3 {
     public static void main(String[] args) {
-        int x = 113134;
-        System.out.println(x / 10);
-        System.out.println(x / 100);
-        System.out.println(x / 1000);
-        System.out.println(x / 10000);
-        System.out.println(x / 100000);
-        System.out.println("Это шестизначное число");
-        if (x > 0) {
-            System.out.println("это положительное шестизначное число");
+        int x = -5;
+        if (x <= 0) {
+            if (x == 0) {
+                x = 10;
+            } else {
+                x = x-2;
+            }
         } else {
-            System.out.println("это отрицательное шестизначное число");
+            x= x + 1;
         }
-
+        System.out.println(x);
     }
 }

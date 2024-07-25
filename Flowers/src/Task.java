@@ -1,4 +1,4 @@
-public class Task extends  User{
+public class Task extends User {
     void task1() {
         /*
         Как получить доступ к переопределенным методам родительского класса?
@@ -8,8 +8,8 @@ public class Task extends  User{
         Ответ запишите ниже
         ....
          */
-     super.goTo();
-     super.stop();
+        super.goTo();
+        super.stop();
 
     }
 

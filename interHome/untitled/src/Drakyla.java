@@ -1,8 +1,13 @@
-public class Drakyla implements FilmWithout, FilmsSubtat {
-    @Override
-    public void printer() {
+public class Drakyla extends Film implements FilmWithout, FilmsSubtat {
+
+    public Drakyla(String janr, int cost, int year) {
+        super(janr, cost, year);
     }
 
-    public void print() {
+    @Override
+    public void startMovieWithSubtat() {
+    }
+
+    public void startMovieWithout() {
     }
 }

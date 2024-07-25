@@ -6,8 +6,10 @@ public class Drakyla extends Film implements FilmWithout, FilmsSubtat {
 
     @Override
     public void startMovieWithSubtat() {
+
     }
 
     public void startMovieWithout() {
     }
+
 }

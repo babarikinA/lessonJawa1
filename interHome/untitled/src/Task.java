@@ -5,6 +5,18 @@ public class Task {
         Titanic t = new Titanic("dramma", 15, 1999);
         EastExpress e = new EastExpress("detectiv", 5, 2007);
 
+        int[] data = new int[4];
+        data[0] = 10;
+        data[1] = 7;
+        data[2] = 15;
+        data[3] = 5;
+
+        Film[] data1 = new Film[4];
+        data1[0] = f;
+        data1[1] = d;
+        data1[2] = t;
+        data1[3] = e;
+
         System.out.println(f);
         System.out.println(d);
         System.out.println(t);

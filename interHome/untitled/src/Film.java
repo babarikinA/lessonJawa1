@@ -1,11 +1,13 @@
 public abstract class Film {
-    public String janr;
-    public int cost;
-    public int year;
+    private String janr;
+    private int cost;
+    private int year;
 
     public String getJanr() {
         return janr;
     }
+    public int getCost(){return cost; }
+    public int getYear(){return year; }
 
     public Film(String janr, int cost, int year) {
         this.janr = janr;

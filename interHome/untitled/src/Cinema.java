@@ -3,10 +3,10 @@ public class Cinema {
 
 
     public void start(Film[] films) {
-         for (Film film: films);
-         System.out.println("janr"+ films.getClass());
-        System.out.println("cost"+ films.getClass());
-        System.out.println("year"+films.getClass());
+         for (int data1 = films.length - 1; data1>=0; data1--);{
+            System.out.println(films.data1);// 6:46 сдался/
+
+        }
         //1.создать геттер для каждого параметра класса фильм!!
         //2.внктри метода старт нужно получить информацию о каждом фильме.
         // Для этого массив который мы передаем внутрь этого метода,

@@ -13,12 +13,17 @@ public class Task {
         data1[2] = t;
         data1[3] = e;
 
-        System.out.println(f);
-        System.out.println(d);
-        System.out.println(t);
-        System.out.println(e);
+        //System.out.println(f);
+        //System.out.println(d);
+        //System.out.println(t);
+        //System.out.println(e);
+
+
+
 
 
     }
-
+    static void start(Film[] films){
+        System.out.println();
+    }
 }

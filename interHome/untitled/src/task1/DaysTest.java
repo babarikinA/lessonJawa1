@@ -11,7 +11,13 @@ public class DaysTest {
         }
 
     }
-    public void example1(){  checkDays(Days.Mon);   // не должен быть тут, но повторял с урока !!
+
+    static void checkDays(Days days) {
+        System.out.println(days);
+    }
+
+    public void example1() {
+        checkDays(Days.Mon);   // не должен быть тут, но повторял с урока !!
         checkDays(Days.Tue);
         checkDays(Days.Wed);
         checkDays(Days.Thu);
@@ -21,11 +27,7 @@ public class DaysTest {
 
     }
 
-    static void checkDays(Days days) {
-        System.out.println(days);
-    }
-    public void example2(){
-
+    public void example2() {
 
 
     }

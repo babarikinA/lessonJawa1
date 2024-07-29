@@ -1,9 +1,9 @@
 public class Cinema {
 
 
-
     public void start(Film[] films) {
-         for (int data1 = films.length - 1; data1>=0; data1--);{
+        for (int data1 = films.length - 1; data1 >= 0; data1--) ;
+        {
             System.out.println(films.data1);// 6:46 сдался/
 
         }

@@ -19,11 +19,9 @@ public class Task {
         //System.out.println(e);
 
 
-
-
-
     }
-    static void start(Film[] films){
+
+    static void start(Film[] films) {
         System.out.println();
     }
 }

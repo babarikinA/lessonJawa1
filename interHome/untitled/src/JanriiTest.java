@@ -6,7 +6,8 @@ public class JanriiTest {
         System.out.println(Janrii.TRAGEDY.getDescription());
         System.out.println(Janrii.WESTERN.getDescription());
     }
-    static void print (Janrii janrii){
+
+    static void print(Janrii janrii) {
         System.out.println(janrii);
         System.out.println(janrii.getDescription());
         System.out.println(janrii.getFiletime());

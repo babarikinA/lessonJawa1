@@ -1,10 +1,10 @@
 package Practice;
 
-public class Vozdyshni extends Transport{
+public class Vozdyshni extends Transport {
     public int RazmaxKriliev;
     public int MinDlinaVPP;
 
-    public Vozdyshni(String moshnost, String marka, int massa, int maxskorost) {
-        super(moshnost, marka, massa, maxskorost);
+    public Vozdyshni(String marka, int moshnost, int massa, int maxskorost) {
+        super(marka, moshnost, massa, maxskorost);
     }
 }

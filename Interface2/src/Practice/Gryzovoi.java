@@ -1,9 +1,14 @@
 package Practice;
 
-public class Gryzovoi extends Nazemni{
+public class Gryzovoi extends Nazemni {
     public int gryzoPodemnost;
 
-    public Gryzovoi() {
-        super(4);
+    public Gryzovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, int gryzoPodemnost) {
+        super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop);
+        this.gryzoPodemnost = gryzoPodemnost;
+    }
+
+    public int getGryzoPodemnost() {
+        return gryzoPodemnost;
     }
 }

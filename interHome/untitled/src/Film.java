@@ -7,8 +7,6 @@ public abstract class Film {
         this.janr = janr;
         this.cost = cost;
         this.year = year;
-
-
     }
 
     public String getJanr() {

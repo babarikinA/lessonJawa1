@@ -13,6 +13,10 @@ public class Task {
         data1[2] = t;
         data1[3] = e;
 
+        Cinema c = new Cinema();
+        c.start(data1);
+        Cinema cinema = new Cinema();
+        cinema.startMovieWithout(data1);
         //System.out.println(f);
         //System.out.println(d);
         //System.out.println(t);

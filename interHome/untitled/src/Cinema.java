@@ -1,11 +1,11 @@
 public class Cinema {
 
-
     public void start(Film[] films) {
-        for (int data1 = films.length - 1; data1 >= 0; data1--) ;
-        {
-            System.out.println(films.data1);// 6:46 сдался/
-
+        for (int i = 0; i < films.length; i++) {
+            Film film = films[i];
+            System.out.println(" Цена - " + film.getCost() + " $");
+            System.out.print("Год выпуска: " + film.getYear());
+            System.out.print(" Жанр этого фильма: " + film.getJanr());
         }
         //1.создать геттер для каждого параметра класса фильм!!
         //2.внктри метода старт нужно получить информацию о каждом фильме.
@@ -15,6 +15,11 @@ public class Cinema {
     }
 
     public void startMovieWithout(Film[] films) {
-
+        for (int i = 0; i < films.length; i++) {
+            Film film = films[i];
+            System.out.println("Цена - " + film.getCost() + " $");
+            System.out.println("Год выпуска: " + film.getYear());
+            System.out.println("Жанр этого фильма: " + film.getJanr());
+        }
     }
 }

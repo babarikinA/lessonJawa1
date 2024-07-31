@@ -23,6 +23,5 @@ public enum Janrii {
 
     public String getDescription() {
         return "Художественный фильм";
-
     }
 }

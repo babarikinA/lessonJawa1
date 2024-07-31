@@ -5,7 +5,6 @@ public class Lesson {
         DayOffWeek[] dayOffWeeks = DayOffWeek.values();
         for (DayOffWeek dayOffWeek : dayOffWeeks) {
             System.out.println(dayOffWeek);
-
         }
     }
 

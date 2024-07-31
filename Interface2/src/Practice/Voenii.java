@@ -4,7 +4,7 @@ public class Voenii extends Vozdyshni {
     private boolean katapult;
     private int rocket;
 
-    public Voenii(String marka, int moshnost, int massa, int maxskorost,boolean katapult, int rocket) {
+    public Voenii(String marka, int moshnost, int massa, int maxskorost, boolean katapult, int rocket) {
         super(marka, moshnost, massa, maxskorost);
         this.rocket = rocket;
         this.katapult = katapult;

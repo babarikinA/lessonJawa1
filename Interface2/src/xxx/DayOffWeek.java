@@ -2,7 +2,6 @@ package xxx;
 
 public enum DayOffWeek {
 
-
     MONDAY("понедельник"),
     TUESDAY("вторник"),
     WEDNESDAY("среда") {
@@ -12,9 +11,7 @@ public enum DayOffWeek {
         }
     };
 
-
     private String rulang;
-
 
     DayOffWeek(String rulang) {
         this.rulang = rulang;

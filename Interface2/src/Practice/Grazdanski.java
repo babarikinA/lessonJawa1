@@ -1,10 +1,21 @@
 package Practice;
 
 public class Grazdanski extends Vozdyshni {
-    public int KolvoPassazir;
-    public boolean biznessClass;
+    private int KolvoPassazir;
+    private boolean biznessClass;
 
-    public Grazdanski(String marka, int moshnost, int massa, int maxskorost) {
-        super(marka, moshnost, massa, maxskorost);
+    public Grazdanski(String marka, int moshnost, int maxskorost, int massa, int razmaxKriliev, int minDlinaVPP, int kolvoPassazir, boolean biznessClass) {
+        super(marka, moshnost, maxskorost, massa, razmaxKriliev, minDlinaVPP);
+        KolvoPassazir = kolvoPassazir;
+        this.biznessClass = biznessClass;
+    }
+
+    public int getKolvoPassazir() {
+        return KolvoPassazir;
+    }
+
+    public boolean isBiznessClass() {
+        return biznessClass;
     }
 }
+

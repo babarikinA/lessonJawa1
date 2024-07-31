@@ -1,8 +1,8 @@
 package Practice;
 
 public class Legkovoi extends Nazemni {
-    public String tipKyzova;
-    public int kolPassazirov;
+    private String tipKyzova;
+    private int kolPassazirov;
     private int Maxspeed = 10;
     private int Time = 1;
 

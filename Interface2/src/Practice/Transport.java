@@ -29,4 +29,9 @@ public class Transport {
         return massa;
     }
 
+    public void kalk(int moshnost) {
+
+        double result = moshnost * 0.74;
+
+    }
 }

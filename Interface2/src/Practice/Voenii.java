@@ -4,10 +4,10 @@ public class Voenii extends Vozdyshni {
     private boolean katapult;
     private int rocket;
 
-    public Voenii(String marka, int moshnost, int massa, int maxskorost, boolean katapult, int rocket) {
-        super(marka, moshnost, massa, maxskorost);
-        this.rocket = rocket;
+    public Voenii(String marka, int moshnost, int maxskorost, int massa, int razmaxKriliev, int minDlinaVPP, boolean katapult, int rocket) {
+        super(marka, moshnost, maxskorost, massa, razmaxKriliev, minDlinaVPP);
         this.katapult = katapult;
+        this.rocket = rocket;
     }
 
     public boolean isKatapult() {
@@ -32,12 +32,6 @@ public class Voenii extends Vozdyshni {
         } else {
             System.out.println("Боеприпасы отсутсвуют");
         }
-    }
-
-    public void kalk(int moshnost) {
-
-        double result = moshnost * 0.74;
-
     }
 
 }

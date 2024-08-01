@@ -3,15 +3,15 @@ package Practice;
 public class Legkovoi extends Nazemni {
     private String tipKyzova;
     private int kolPassazirov;
-    private int Maxspeed = 10;
-    private int Time = 1;
+    private int maxspeed;
+    private int time;
 
     public Legkovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, String tipKyzova, int kolPassazirov, int maxspeed, int time) {
         super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop);
         this.tipKyzova = tipKyzova;
         this.kolPassazirov = kolPassazirov;
-        Maxspeed = maxspeed;
-        Time = time;
+        this.maxspeed = maxspeed;
+        this.time = time;
     }
 
     public String getTipKyzova() {
@@ -23,10 +23,10 @@ public class Legkovoi extends Nazemni {
     }
 
     public int getMaxspeed() {
-        return Maxspeed;
+        return maxspeed;
     }
 
-    public int getTime() {
-        return Time;
+    public int gettime() {
+        return time;
     }
 }

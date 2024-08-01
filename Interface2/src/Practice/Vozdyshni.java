@@ -1,21 +1,21 @@
 package Practice;
 
 public class Vozdyshni extends Transport {
-    private int RazmaxKriliev;
-    private int MinDlinaVPP;
+    private int razmaxKriliev;
+    private int minDlinaVPP;
 
     public Vozdyshni(String marka, int moshnost, int maxskorost, int massa, int razmaxKriliev, int minDlinaVPP) {
         super(marka, moshnost, maxskorost, massa);
-        RazmaxKriliev = razmaxKriliev;
-        MinDlinaVPP = minDlinaVPP;
+        this.razmaxKriliev = razmaxKriliev;
+        this.minDlinaVPP = minDlinaVPP;
     }
 
     public int getRazmaxKriliev() {
-        return RazmaxKriliev;
+        return razmaxKriliev;
     }
 
     public int getMinDlinaVPP() {
-        return MinDlinaVPP;
+        return minDlinaVPP;
     }
 }
 

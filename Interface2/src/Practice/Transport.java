@@ -32,6 +32,7 @@ public class Transport {
     public void kalk(int moshnost) {
 
         double result = moshnost * 0.74;
-
+// return result ???
     }
+
 }

@@ -17,5 +17,6 @@ public class Vozdyshni extends Transport {
     public int getMinDlinaVPP() {
         return minDlinaVPP;
     }
+
 }
 

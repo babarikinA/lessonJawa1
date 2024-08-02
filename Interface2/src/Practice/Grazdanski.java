@@ -17,5 +17,13 @@ public class Grazdanski extends Vozdyshni {
     public boolean isBiznessClass() {
         return biznessClass;
     }
-}
 
+    public void kolichestvo() {
+        if (kolvoPassazir >= 300) {
+            System.out.println("Самолет загружен");
+        } else {
+            System.out.println("Вам нужен самолет побольше");
+        }
+
+    }
+}

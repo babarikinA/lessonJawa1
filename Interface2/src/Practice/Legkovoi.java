@@ -29,4 +29,8 @@ public class Legkovoi extends Nazemni {
     public int gettime() {
         return time;
     }
+
+    double distance = time * maxspeed;
+
+    double toplivo = distance / getRashodTop();
 }

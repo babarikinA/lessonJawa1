@@ -6,7 +6,7 @@ public class Grazdanski extends Vozdyshni {
 
     public Grazdanski(String marka, int moshnost, int maxskorost, int massa, int razmaxKriliev, int minDlinaVPP, int kolvoPassazir, boolean biznessClass) {
         super(marka, moshnost, maxskorost, massa, razmaxKriliev, minDlinaVPP);
-        kolvoPassazir = kolvoPassazir;
+        this.kolvoPassazir = kolvoPassazir;
         this.biznessClass = biznessClass;
     }
 
@@ -24,6 +24,5 @@ public class Grazdanski extends Vozdyshni {
         } else {
             System.out.println("Вам нужен самолет побольше");
         }
-
     }
 }

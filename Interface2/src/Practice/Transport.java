@@ -29,10 +29,9 @@ public class Transport {
         return massa;
     }
 
-    public double kalk(int moshnost) {
-
+    public double kalk() {
         double result = moshnost * 0.74;
-        return result;
+        return moshnost;
     }
 
 }

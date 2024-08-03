@@ -8,23 +8,11 @@ public class Gryzovoi extends Nazemni {
         this.gryzoPodemnost = gryzoPodemnost;
     }
 
-    public int gryzik() {
-        return gryz();
-    }
-
-    public int getGryzoPodemnost() {
-        return gryzoPodemnost;
-    }
-
-
-
-    public int gryz () {
+    public void gryz() {
         if (gryzoPodemnost >= 3500) {
             System.out.println("Грузовик загружен");
         } else {
             System.out.println("Вам нужен грузовик побольше");
         }
-        return 0;
     }
-
 }

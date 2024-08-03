@@ -3,14 +3,14 @@ package Practice;
 public class Legkovoi extends Nazemni {
     private String tipKyzova;
     private int kolPassazirov;
-    private int maxspeed;
     private int time;
+    double distance = time * maxspeed;
+    double toplivo = distance / getRashodTop();
 
     public Legkovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, String tipKyzova, int kolPassazirov, int maxspeed, int time) {
         super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop);
         this.tipKyzova = tipKyzova;
         this.kolPassazirov = kolPassazirov;
-        this.maxspeed = maxspeed;
         this.time = time;
     }
 
@@ -22,15 +22,17 @@ public class Legkovoi extends Nazemni {
         return kolPassazirov;
     }
 
-    public int getMaxspeed() {
-        return maxspeed;
+    public int getMaxskorost() {
+        return super.maxskorost();
     }
 
-    public int gettime() {
+    public int getTime() {
         return time;
     }
 
-    double distance = time * maxspeed;
+    public int getDiscription() {
+        return time;
+    }
 
-    double toplivo = distance / getRashodTop();
+
 }

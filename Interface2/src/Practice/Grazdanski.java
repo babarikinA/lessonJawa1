@@ -25,4 +25,10 @@ public class Grazdanski extends Vozdyshni {
             System.out.println("Вам нужен самолет побольше");
         }
     }
+
+    public String getDescription() {
+        return "За время" + " ч, самолет " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч пролетит " + " км и провезет " + getkolvoPassazir() + " пассажиров.";
+    }
+
+
 }

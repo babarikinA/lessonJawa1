@@ -34,5 +34,10 @@ public class Voenii extends Vozdyshni {
         }
     }
 
+    public String getDescription() {
+        return "За время" + " ч, самолет " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч пролетит " + " км и выпустит " + getRocket() + " ракет.";
+    }
+
+
 }
 

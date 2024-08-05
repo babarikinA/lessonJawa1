@@ -1,32 +1,18 @@
 package Practice;
 
 public class Task {
-    public void example1
-    public void example2
-    public void example3
-
-    {
-
-        Voenii voenii = new Voenii("toyota", 13, 12, 43, 12, 23, false, 42);
-        System.out.println(voenii.isKatapult());
-        voenii.katapult();
-    }
-
-    {
-        Gryzovoi gryzovoi = new Gryzovoi("Kamaz", 150, 120, 3500, 8, 24, 3200);
-        System.out.println(gryzovoi.gryzik());
-
-    }
-
-    {
-        Grazdanski grazdanski = new Grazdanski("Boeing", 2000, 1300, 5000, 30, 3, 400, false);
-        System.out.println(grazdanski.kolichestvo());
-    }
-
     public static void main(String[] args) {
-
-        Legkovoi legkovoi = new Legkovoi("BMW", 120, 180, 1300, 4, 10, "Sedan", 4, 200, 2);
-        System.out.println("За время" + legkovoi.gettime() + "ч, автомобиль " + legkovoi.getMarka() + "двигаясь с максимальной скоростью:" + legkovoi.getMaxspeed() + "км/ч проедет" + legkovoi.distance + "км и израсходует" + legkovoi.toplivo + "литров топлива.");
-
+        Voenii voenii = new Voenii("F16", 500,1600, 5000, 14,2, false, 30);
+        Legkovoi legkovoi = new Legkovoi("bmw",160,280, 1100, 4, 10, "sedan", 4);
+        Gryzovoi gryzovoi = new Gryzovoi("Kamaz", 300, 120, 3400, 12, 20, 3000);
+        Transport transport = new Transport("Avto",24,220,1200);
+        System.out.println(voenii.getMarka());
+        System.out.println(transport.kalk());
+        System.out.println(voenii.kalk());
+        System.out.println(legkovoi.getMoshnost());
+        System.out.println(legkovoi.kalk());
+        System.out.println(gryzovoi.gryz());
+        System.out.println(legkovoi.getDescription());
     }
+
 }

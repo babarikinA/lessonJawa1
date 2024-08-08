@@ -5,7 +5,6 @@ public class Transport {
     private int moshnost;
     private int maxskorost;
     private int massa;
-    private int distance;
 
     public Transport(String marka, int moshnost, int maxskorost, int massa) {
         this.marka = marka;

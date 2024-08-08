@@ -3,8 +3,8 @@ package Practice;
 public class Gryzovoi extends Nazemni {
     private int gryzoPodemnost;
 
-    public Gryzovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, int gryzoPodemnost, int distance, int time) {
-        super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop, distance, time);
+    public Gryzovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, int gryzoPodemnost) {
+        super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop);
         this.gryzoPodemnost = gryzoPodemnost;
     }
 
@@ -17,7 +17,7 @@ public class Gryzovoi extends Nazemni {
     }
 
     public String getDescription() {
-        return "За время " + getTime() + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + getDistance() + " км и израсходует " + getRashodTop() + " литров топлива.";
+        return "За время " + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " +  " км и израсходует " + getRashodTop() + " литров топлива.";
     }
 
 }

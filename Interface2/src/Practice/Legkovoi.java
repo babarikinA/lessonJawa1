@@ -4,8 +4,8 @@ public class Legkovoi extends Nazemni {
     private String tipKyzova;
     private int kolPassazirov;
 
-    public Legkovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, String tipKyzova, int kolPassazirov, int distance, int time) {
-        super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop, distance, time);
+    public Legkovoi(String marka, int moshnost, int maxskorost, int massa, int kolKoles, int rashodTop, String tipKyzova, int kolPassazirov) {
+        super(marka, moshnost, maxskorost, massa, kolKoles, rashodTop);
         this.tipKyzova = tipKyzova;
         this.kolPassazirov = kolPassazirov;
     }
@@ -18,8 +18,25 @@ public class Legkovoi extends Nazemni {
         return kolPassazirov;
     }
 
-    public String getDescription() {
-        return "За время " + getTime() + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + getDistance() + " км и израсходует " + getRashodTop() + " литров топлива.";
+
+    public String getDescription(int time) {
+
+        calculateDistance(10);
+
+        return "За время " + time + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + calculateDistance() + " км и израсходует " +calculateRashod(4000 )+ " литров топлива.";
+    }
+
+    public void calculateDistance(int time) {
+        int t = getMaxskorost() * time;
+
+    }
+
+    private int calculateRashod(int distance) {
+
+        int d = (distance / 100) * getRashodTop();
+
+        return d;
+
     }
 
 }

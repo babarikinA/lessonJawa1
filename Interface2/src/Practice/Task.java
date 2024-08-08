@@ -13,7 +13,7 @@ public class Task {
         System.out.println(legkovoi.getMoshnost());
         System.out.println(legkovoi.kalk());
         // System.out.println(gryzovoi.gryz());// когда поменял на метод воид перестала запускаться - закомитил
-        System.out.println(legkovoi.getDescription(5));
+        System.out.println(legkovoi.getDescription(3));
         System.out.println(gryzovoi.getDescription());
         System.out.println(grazdanski.getDescription());
         System.out.println(voenii.getDescription());

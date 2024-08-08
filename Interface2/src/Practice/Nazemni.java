@@ -14,7 +14,7 @@ public class Nazemni extends Transport {
         return kolKoles;
     }
 
-    public int getRashodTop(){
+    public int getRashodTop() {
         return rashodTop;
     }
 

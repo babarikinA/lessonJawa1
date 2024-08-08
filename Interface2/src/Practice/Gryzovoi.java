@@ -17,7 +17,7 @@ public class Gryzovoi extends Nazemni {
     }
 
     public String getDescription() {
-        return "За время " + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " +  " км и израсходует " + getRashodTop() + " литров топлива.";
+        return "За время " + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + " км и израсходует " + getRashodTop() + " литров топлива.";
     }
 
 }

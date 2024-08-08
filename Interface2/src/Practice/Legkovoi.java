@@ -21,14 +21,14 @@ public class Legkovoi extends Nazemni {
 
     public String getDescription(int time) {
 
-        calculateDistance(10);
+        int distance = calculateDistance(3);
 
-        return "За время " + time + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + calculateDistance() + " км и израсходует " +calculateRashod(4000 )+ " литров топлива.";
+        return "За время " + time + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + distance + " км и израсходует " + calculateRashod(distance) + " литров топлива.";
     }
 
-    public void calculateDistance(int time) {
+    public int calculateDistance(int time) {
         int t = getMaxskorost() * time;
-
+        return t;
     }
 
     private int calculateRashod(int distance) {

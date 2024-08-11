@@ -21,7 +21,7 @@ public class Legkovoi extends Nazemni {
 
     public String getDescription(int time) {
 
-        int distance = calculateDistance(3);
+        int distance = calculateDistance(time);
 
         return "За время " + time + " ч, автомобиль " + getMarka() + " двигаясь с максимальной скоростью: " + getMaxskorost() + " км/ч проедет " + distance + " км и израсходует " + calculateRashod(distance) + " литров топлива.";
     }
@@ -31,9 +31,9 @@ public class Legkovoi extends Nazemni {
         return t;
     }
 
-    private int calculateRashod(int distance) {
+    private double calculateRashod(double distance) {
 
-        int d = (distance / 100) * getRashodTop();
+        double d = (distance / 100) * getRashodTop();
 
         return d;
 

@@ -6,6 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="08924abd-c9d5-4c67-8449-e91f496185fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Grazdanski.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Grazdanski.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Gryzovoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Gryzovoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Legkovoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Legkovoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Nazemni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Nazemni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Transport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Voenii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Voenii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/Vozdyshni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/Vozdyshni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/interf/Chelovek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Chelovek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/interf/Kyrtka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Kyrtka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/interf/Obyv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Obyv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/interf/Shtani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Shtani.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/interf/TestInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/TestInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shattle/IStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/IStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shattle/Kosmodrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/Kosmodrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shattle/Shattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/Shattle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shattle/TestShattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/TestShattle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +60,11 @@
 }]]></component>
   <component name="RunManager" selected="Application.TestShattle">
     <configuration name="Task" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practice.Task" />
+      <option name="MAIN_CLASS_NAME" value="practice.Task" />
       <module name="Interface2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practice.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -56,11 +73,11 @@
       </method>
     </configuration>
     <configuration name="TestInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practice.interf.TestInt" />
+      <option name="MAIN_CLASS_NAME" value="practice.interf.TestInt" />
       <module name="Interface2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practice.interf.*" />
+          <option name="PATTERN" value="practice.interf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,11 +86,11 @@
       </method>
     </configuration>
     <configuration name="TestShattle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Shattle.TestShattle" />
+      <option name="MAIN_CLASS_NAME" value="shattle.TestShattle" />
       <module name="Interface2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Shattle.*" />
+          <option name="PATTERN" value="shattle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

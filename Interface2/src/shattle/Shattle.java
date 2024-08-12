@@ -1,10 +1,10 @@
-package Shattle;
+package shattle;
 
 public class Shattle implements IStart{
 
 
     @Override
-    public boolean pps(boolean a) {
+    public boolean pps() {
         return false;
     }
 

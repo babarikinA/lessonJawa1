@@ -1,4 +1,4 @@
-package Practice.interf;
+package practice.interf;
 
 public interface Obyv {
 

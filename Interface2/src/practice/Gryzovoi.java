@@ -1,4 +1,4 @@
-package Practice;
+package practice;
 
 public class Gryzovoi extends Nazemni {
     private int gryzoPodemnost;

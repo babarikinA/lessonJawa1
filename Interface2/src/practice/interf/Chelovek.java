@@ -1,4 +1,4 @@
-package Practice.interf;
+package practice.interf;
 
 public class Chelovek implements Kyrtka, Shtani, Obyv {
 

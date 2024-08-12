@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08924abd-c9d5-4c67-8449-e91f496185fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/Legkovoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/Legkovoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +35,13 @@
   "keyToString": {
     "Application.Task.executor": "Run",
     "Application.TestInt.executor": "Run",
+    "Application.TestShattle.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "www",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TestInt">
+  <component name="RunManager" selected="Application.TestShattle">
     <configuration name="Task" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Practice.Task" />
       <module name="Interface2" />
@@ -69,10 +68,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestShattle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Shattle.TestShattle" />
+      <module name="Interface2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Shattle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestInt" />
+        <item itemvalue="Application.TestShattle" />
         <item itemvalue="Application.Task" />
+        <item itemvalue="Application.TestInt" />
       </list>
     </recent_temporary>
   </component>
@@ -86,5 +99,15 @@
       <updated>1722440381472</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -8,6 +8,11 @@ public class Shattle implements IStart {
 
         // math random!!! return x > 6 true !!!
 
+        int randomInt = (int) (Math.random()*11);
+
+        if (randomInt > 3){
+            return true;
+        }else
         return false;
     }
 

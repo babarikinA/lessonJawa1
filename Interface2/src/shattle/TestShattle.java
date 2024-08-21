@@ -6,6 +6,7 @@ public class TestShattle {
         Kosmodrom kosmodrom = new Kosmodrom();
         Shattle shattle = new Shattle();
 kosmodrom.zapysk(shattle);
+shattle.pps();
     }
 
 }

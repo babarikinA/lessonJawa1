@@ -1,34 +1,32 @@
 package practice.interf;
 
-public class Chelovek implements Kyrtka, Shtani, Obyv {
+public class Chelovek  {
 
     private Kyrtka kyrtka;
     private Shtani shtani;
     private Obyv obyv;
 
-    public Chelovek(Obyv obyv, Shtani shtani, Kyrtka kyrtka) {
+    AdidasKyrtka kyrtka1 = new AdidasKyrtka();
+    PumaShtani shtani1 = new PumaShtani();
+    NikeObyv obyv1 = new NikeObyv();
+
+    public Chelovek(AdidasKyrtka kyrtka, PumaShtani shtani, NikeObyv obyv) {
         this.obyv = obyv;
         this.shtani = shtani;
         this.kyrtka = kyrtka;
     }
 
+public String odetsya(){
+        kyrtka1.odetsya();
+        shtani1.odetsya();
+        obyv1.odetsya();
+        return "полностью одет";
+}
 
-    // Идея заставила меня сделать эти строчки которые находяться ниже!!! не понял зачем !!
-    //Не понял значения слова "делаем несколько реализаций каждого интерфейса
-    // так же не понял зачем делать поле Имя !
-    // ситается ли полем класса следуюзие --- private boolean kyrtka; private boolean shtani; private boolean obyv;???
-    @Override
-    public void nadet() {
-
-
-
-    }
-
-    @Override
-    public void snat() {
-
+public String razdtsya(){
+        kyrtka1.razdetsya();
+        shtani1.razdetsya();
+        obyv1.razdetsya();
+        return "полностью раздет";
     }
 }
-//start interface practice tusk1 - 23:50
-
-//finished interface practice tusk1 - 00:42 - without push

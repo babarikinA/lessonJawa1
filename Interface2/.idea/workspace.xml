@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08924abd-c9d5-4c67-8449-e91f496185fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/practice/interf/AdidasKyrtka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/practice/interf/NikeObyv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/practice/interf/PumaShtani.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shattle/Shattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/Shattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shattle/TestShattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/TestShattle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/practice/interf/Chelovek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Chelovek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/practice/interf/TestInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/TestInt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestShattle">
+  <component name="RunManager" selected="Application.TestInt">
     <configuration name="Task" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practice.Task" />
       <module name="Interface2" />
@@ -85,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestShattle" />
         <item itemvalue="Application.TestInt" />
+        <item itemvalue="Application.TestShattle" />
         <item itemvalue="Application.Task" />
       </list>
     </recent_temporary>

@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08924abd-c9d5-4c67-8449-e91f496185fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/practice/interf/AdidasKyrtka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/practice/interf/NikeObyv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/practice/interf/PumaShtani.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/practice/interf/AdidasKyrtka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/AdidasKyrtka.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/practice/interf/Chelovek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/Chelovek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/practice/interf/NikeObyv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/NikeObyv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/practice/interf/PumaShtani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/PumaShtani.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/practice/interf/TestInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/interf/TestInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shattle/Shattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shattle/Shattle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

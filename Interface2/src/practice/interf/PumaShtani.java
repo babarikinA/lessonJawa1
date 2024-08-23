@@ -12,12 +12,4 @@ public class PumaShtani implements Shtani {
 
     }
 
-    public String odetsya(){
-        return "Штаны Puma надеты";
-    }
-
-    public String razdetsya(){
-        return "Штаны PUMA раздеты";
-    }
-
 }

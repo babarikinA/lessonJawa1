@@ -1,6 +1,6 @@
 package practice.interf;
 
-public class NikeObyv implements Obyv{
+public class NikeObyv implements Obyv {
 
     @Override
     public void snat() {
@@ -10,14 +10,6 @@ public class NikeObyv implements Obyv{
     @Override
     public void nadet() {
 
-    }
-
-    public String odetsya(){
-        return "Обувь Nike надета";
-    }
-
-    public String razdetsya(){
-        return "Обувь Nike раздета";
     }
 
 }

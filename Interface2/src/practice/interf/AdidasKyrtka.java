@@ -1,6 +1,6 @@
 package practice.interf;
 
-public class AdidasKyrtka implements Kyrtka{
+public class AdidasKyrtka implements Kyrtka {
 
     @Override
     public void snat() {
@@ -11,13 +11,5 @@ public class AdidasKyrtka implements Kyrtka{
     public void nadet() {
 
     }
-
-    public String odetsya(){
-        return "куртка Adidas одета";
-    }
-
-public String razdetsya(){
-        return "куртка Adidas раздета";
-}
 
 }

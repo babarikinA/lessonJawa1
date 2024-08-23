@@ -13,7 +13,6 @@ public class Shattle implements IStart {
         if (randomInt > 3){
             return true;
         }else {
-
             return false;
         }
     }

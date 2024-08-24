@@ -6,7 +6,7 @@ public class Chelovek {
     private Shtani shtani;
     private Obyv obyv;
 
-    public Chelovek(AdidasKyrtka kyrtka, PumaShtani shtani, NikeObyv obyv) {
+    public Chelovek(Kyrtka kyrtka, Shtani shtani, Obyv obyv) {
         this.obyv = obyv;
         this.shtani = shtani;
         this.kyrtka = kyrtka;

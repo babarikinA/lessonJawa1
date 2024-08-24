@@ -9,8 +9,9 @@ public class TestInt {
 
         Chelovek chelovek = new Chelovek(adidasKyrtka, pumaShtani, nikeObyv);
 
-        System.out.println(chelovek.odet());
-        System.out.println(chelovek.razdet());
+        chelovek.odet();
+
+        chelovek.razdet();
 
     }
 

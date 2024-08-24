@@ -12,18 +12,18 @@ public class Chelovek {
         this.kyrtka = kyrtka;
     }
 
-    public String odet() {
+    public void odet() {
         kyrtka.nadet();
         shtani.nadet();
         obyv.nadet();
-        return "Одежда одета";
+
     }
 
-    public String razdet() {
+    public void razdet() {
         kyrtka.snat();
         shtani.snat();
         obyv.snat();
-        return "Одежда снята";
+
     }
 
 }

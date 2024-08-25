@@ -11,6 +11,7 @@ public class Lesson {
                 if (password.equals(confirmPassword)) {
                     System.out.println("Пароль введен верно.");
                     System.out.println("Добро пожаловать!");
+                    return true;
                 } else {
 
                     try {
@@ -23,7 +24,10 @@ public class Lesson {
                     } finally {
                         System.out.println("Попробуйте ввести пароль снова!");
                     }
+                    return false;
                 }
+            } else {
+                System.out.println("Пароль должен содержать меньше символов.");
             }
 
         } else {
@@ -36,7 +40,7 @@ public class Lesson {
             }
         }
 
-        return true;
+        return false;
 
     }
 }

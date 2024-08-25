@@ -1,13 +1,13 @@
 package autorisation;
 
-public class WrongPasswordException extends RuntimeException{
+public class WrongPasswordException extends RuntimeException {
 
-public WrongPasswordException(String message){
-    super(message);
-}
+    public WrongPasswordException(String message) {
+        super(message);
+    }
 
-public WrongPasswordException(){
+    public WrongPasswordException() {
 
-}
+    }
 
 }

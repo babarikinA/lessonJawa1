@@ -1,7 +1,9 @@
 package homeWorkKollection;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Tusk3 {
 
@@ -22,6 +24,15 @@ public class Tusk3 {
         Pet result3 = pets.get("name3");
         System.out.println(result3);
 
+        String kluchi = pets.keySet().toString();
+        System.out.println(kluchi);
+
+
+        Set<Object> keysSet = new HashSet<>(pets.keySet());//создание HashSet из ключей HashMap
+
+        System.out.println(keysSet);
+
     }
 
 }
+

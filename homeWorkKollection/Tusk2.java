@@ -23,7 +23,10 @@ public class Tusk2 {
         }
 
         box.get(0).setWeight(10);
-        box.set(1, heavyBox);
+
+        HeavyBox string = box.get(0);// задаем имя переменной в которой храниться box с индексом 0;
+
+        box.get(1).setWeight(string.getWeight());// присваем box с индексом 1 переменную string, в которой храниться  box с индексом 0;
 
         int sizeAll = box.size();
         System.out.println(sizeAll);

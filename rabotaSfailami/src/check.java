@@ -8,6 +8,9 @@ public class check {
         Tusk2 tusk2 = new Tusk2();
         tusk2.metod1();
         tusk2.metod2();
+
+        Tusk3 tusk3 = new Tusk3();
+        tusk3.metod2();
     }
 
 }

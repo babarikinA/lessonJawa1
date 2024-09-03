@@ -1,8 +1,12 @@
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+
+    private static final long serialVersionUID = -4364626656486808842L;
 
         private String firstName;
         private String lastName;
-        private int age;
+        private transient int age;
 
         public Employee(String firstName, String lastName, int age) {
             this.firstName = firstName;
@@ -21,4 +25,13 @@ public class Employee {
         public int getAge() {
             return age;
         }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
+}

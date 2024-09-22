@@ -8,7 +8,6 @@ public class Main {
 
         try {
             Thread.sleep(2000);
-            //tusk1.off();
             thread.interrupt();
             Thread.sleep(5000);
         } catch (InterruptedException e) {

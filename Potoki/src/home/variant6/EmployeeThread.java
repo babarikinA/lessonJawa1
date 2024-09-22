@@ -8,10 +8,6 @@ public class EmployeeThread extends Thread {
         super(name);
     }
 
-     // public void setEmail(String emailValue) {
-    //    email = emailValue;
-   // }
-
     @Override
     public void run() {
         email.set("test@gmail.com" + Thread.currentThread().getId());

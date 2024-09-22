@@ -6,7 +6,6 @@ public class Tusk2Check {
 
         for (int i = 0; i < 5; i++) {
             EmployeeThread employeeThread = new EmployeeThread("Thread with index " + i);
-           // employeeThread.setEmail("testemail" + i);
             employeeThread.start();
         }
 

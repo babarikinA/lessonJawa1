@@ -1,6 +1,5 @@
 public class Tusk3 implements Runnable{
 
-
     @Override
     public void run() {
         System.out.println(String.format("Поток %s работает" , Thread.currentThread().getName()));

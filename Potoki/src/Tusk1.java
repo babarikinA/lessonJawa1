@@ -15,7 +15,7 @@ public class Tusk1 implements Runnable{
     public void run() {
         System.out.println(String.format("Поток %s работает" , Thread.currentThread().getName()));
 
-        while (Thread.currentThread().isInterrupted()){
+        while (!Thread.currentThread().isInterrupted()){
             System.out.println("sasha");
         }
 

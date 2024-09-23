@@ -1,9 +1,5 @@
 public class Tusk1 implements Runnable{
 
-    public Tusk1 () {
-        on = true;
-    }
-
     //Невозможно сделать так как у нас интерфейс и в нем нету конструктора - выводить в поток имя текущего потока
     @Override
     public void run() {

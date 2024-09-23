@@ -1,11 +1,5 @@
 public class Tusk1 implements Runnable{
 
-    private boolean on;
-
-    public void off(){
-        on = false;
-    }
-
     public Tusk1 () {
         on = true;
     }

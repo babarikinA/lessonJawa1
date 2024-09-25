@@ -10,41 +10,32 @@ public class Tusk3 {
     // половину удалил - поэтому буду лепить из этого
 
     public static void main(String[] args) {
-        Consumer<String> consumer2 = (HeavyBox) -> System.out.println(HeavyBox.toString());
-        Consumer<HeavyBox> consumer = (heavyBox) -> {
 
-            if (heavyBox.getWeight() > 300){
-                System.out.println("HeavyBox weight is " + heavyBox.getWeight());
-            }else {
-                System.out.println("HeavyBox weight is < 300");
-            }
-
-        };
-
-        consumer.accept(new HeavyBox(301));
+        List<HeavyBox> heavyBoxes = new ArrayList<>();
 
         HeavyBox heavyBox = new HeavyBox(200);
         HeavyBox heavyBox1 = new HeavyBox(300);
         HeavyBox heavyBox2 = new HeavyBox(400);
         HeavyBox heavyBox3 = new HeavyBox(500);
 
-        List<HeavyBox> heavyBoxes = new ArrayList<>();
-
         heavyBoxes.add(heavyBox);
         heavyBoxes.add(heavyBox1);
         heavyBoxes.add(heavyBox2);
         heavyBoxes.add(heavyBox3);
 
-        Consumer<HeavyBox> consumer1 = () -> {
-
-            if (heavyBoxes.getWeight() > 300){
-                System.out.println("HeavyBox weight is " + heavyBoxes.getWeight());
-            }else {
-                System.out.println("HeavyBox weight is < 300");
+        Consumer<HeavyBox> consumer2 = heavyBox4 -> System.out.println(heavyBox4.toString());
+        Consumer<HeavyBox> consumer = heavyBox4 -> {
+            if (heavyBox4.getWeight() > 300) {
+                System.out.println("HeavyBox weight is " + heavyBox4.getWeight());
             }
 
         };
+        // спасибо чату gpt за строки ниже
+        Consumer<HeavyBox> consumer1 = consumer.andThen(consumer2);
+        for (HeavyBox heavyBox4 : heavyBoxes) {
+            consumer1.accept(heavyBox4);
 
+        }
     }
 
 }

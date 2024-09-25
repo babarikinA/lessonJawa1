@@ -19,8 +19,8 @@ public class HeavyBox {
     @Override
     public String toString() {
         return "HeavyBox{" +
-                    "weight=" + weight +
-                    '}';
+                "weight=" + weight +
+                '}';
     }
 
 }

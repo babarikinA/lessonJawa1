@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Tusk1 {
 
@@ -30,34 +32,18 @@ public class Tusk1 {
         productList.add(product8);
         productList.add(product9);
 
-        System.out.println(productList);
-        System.out.println(productList.size());
-
-        productList.get(2).setProductId(0);
+        productList.get(1).setProductId(0);
         System.out.println(productList);
 
         productList = productList.stream()
-                .skip(5) // При этом фильтрация и все последующие опреации должны выполняться с 5 продукта в коллекции
+                .filter(i -> i.getProductId() != 0)
+                .skip(5)                          // При этом фильтрация и все последующие опреации должны выполняться с 5 продукта в коллекции
+                .sorted(new Compar())               //   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
+                .distinct()                        //  В этой же цепочке вызовов методов удалите все дубликаты.
+                .forEach((Product)-> )    // -- не пониаю как использовать в данной ситуции стринг билдер
+                //.forEach(Consumer<StringBuilder>)
                 .collect(Collectors.toList());
         System.out.println(productList);
-
-        productList = productList.stream()
-                .sorted(new Compar())//   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
-                .collect(Collectors.toList());
-
-        System.out.println(productList);
-
-        productList = productList.stream()
-                .distinct()//                  В этой же цепочке вызовов методов удалите все дубликаты.
-                .collect(Collectors.toList());
-        System.out.println(productList);
-
-// как вывести в обратном порядке ???
-       // for (int i =0 ; i > productList; i++){
-         //   System.out.println(i);
-        //}
-
-
     }
 
 }

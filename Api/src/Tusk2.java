@@ -30,32 +30,16 @@ public class Tusk2 {
         productList.add(product8);
         productList.add(product9);
 
-        System.out.println(productList);
-        System.out.println(productList.size()); // получили 10
-
-        productList.get(10-1).setProductId(0);// меняем айди последнего продукта на 0
-        System.out.println(productList);// проверяем
+        productList.get(productList.size() -1).setProductId(0);  // меняем айди последнего продукта на 0
+        System.out.println(productList);                        // проверяем
 
         productList = productList.stream()
-                .filter(i -> i.getProductId() != 0)
-                .collect(Collectors.toList());
-        System.out.println(productList);//    С помощью Stream API отфильтровать продукты по условию productId не ровно 0.
-
-        productList = productList.stream()
-                .limit(4) // При этом фильтрация и все последующие опреации должны выполняться только для первых 4 продуктов в коллекции
-                .collect(Collectors.toList());
-
-        productList = productList.stream()
-                .distinct()//                  В этой же цепочке вызовов методов удалите все дубликаты.
+                .filter(i -> i.getProductId() != 0)   //      С помощью Stream API отфильтровать продукты по условию productId не ровно 0.
+                .limit(4)                    //           При этом фильтрация и все последующие опреации должны выполняться только для первых 4 продуктов в коллекции
+                .distinct()                         //          В этой же цепочке вызовов методов удалите все дубликаты.
+                .sorted(new Compar())              //           В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
                 .collect(Collectors.toList());
         System.out.println(productList);
-
-            productList = productList.stream()
-                    .sorted(new Compar())//   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
-                    .collect(Collectors.toList());
-
-        System.out.println(productList);
-
     }
 
 }

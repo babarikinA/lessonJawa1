@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Tusk1 {
+public class Tusk2 {
 
     public static void main(String[] args) {
 
@@ -31,32 +31,30 @@ public class Tusk1 {
         productList.add(product9);
 
         System.out.println(productList);
-        System.out.println(productList.size());
+        System.out.println(productList.size()); // получили 10
 
-        productList.get(2).setProductId(0);
-        System.out.println(productList);
-
-        productList = productList.stream()
-                .skip(5) // При этом фильтрация и все последующие опреации должны выполняться с 5 продукта в коллекции
-                .collect(Collectors.toList());
-        System.out.println(productList);
+        productList.get(10-1).setProductId(0);// меняем айди последнего продукта на 0
+        System.out.println(productList);// проверяем
 
         productList = productList.stream()
-                .sorted(new Compar())//   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
+                .filter(i -> i.getProductId() != 0)
                 .collect(Collectors.toList());
+        System.out.println(productList);//    С помощью Stream API отфильтровать продукты по условию productId не ровно 0.
 
-        System.out.println(productList);
+        productList = productList.stream()
+                .limit(4) // При этом фильтрация и все последующие опреации должны выполняться только для первых 4 продуктов в коллекции
+                .collect(Collectors.toList());
 
         productList = productList.stream()
                 .distinct()//                  В этой же цепочке вызовов методов удалите все дубликаты.
                 .collect(Collectors.toList());
         System.out.println(productList);
 
-// как вывести в обратном порядке ???
-       // for (int i =0 ; i > productList; i++){
-         //   System.out.println(i);
-        //}
+            productList = productList.stream()
+                    .sorted(new Compar())//   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
+                    .collect(Collectors.toList());
 
+        System.out.println(productList);
 
     }
 

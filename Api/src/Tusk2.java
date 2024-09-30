@@ -9,13 +9,13 @@ public class Tusk2 {
         Product product = new Product("Яблоко", 0);
         Product product1 = new Product("Банан", 1);
         Product product2 = new Product("Арбуз", 2);
-        Product product3 = new Product("Виноград",3);
-        Product product4 = new Product("Слива",4);
-        Product product5 = new Product("Абрикос",5);
-        Product product6 = new Product("Вишня",6);
-        Product product7 = new Product("Клубника",7);
-        Product product8 = new Product("Груша",8);
-        Product product9 = new Product("Апельсин",9);
+        Product product3 = new Product("Виноград", 3);
+        Product product4 = new Product("Слива", 4);
+        Product product5 = new Product("Абрикос", 5);
+        Product product6 = new Product("Вишня", 6);
+        Product product7 = new Product("Клубника", 7);
+        Product product8 = new Product("Груша", 8);
+        Product product9 = new Product("Апельсин", 9);
 
         List<Product> productList = new ArrayList<>();
 
@@ -30,7 +30,7 @@ public class Tusk2 {
         productList.add(product8);
         productList.add(product9);
 
-        productList.get(productList.size() -1).setProductId(0);  // меняем айди последнего продукта на 0
+        productList.get(productList.size() - 1).setProductId(0);  // меняем айди последнего продукта на 0
         System.out.println(productList);                        // проверяем
 
         productList = productList.stream()

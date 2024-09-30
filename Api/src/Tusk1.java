@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Tusk1 {
 
@@ -11,13 +8,13 @@ public class Tusk1 {
         Product product = new Product("Яблоко", 0);
         Product product1 = new Product("Банан", 1);
         Product product2 = new Product("Арбуз", 2);
-        Product product3 = new Product("Виноград",3);
-        Product product4 = new Product("Слива",4);
-        Product product5 = new Product("Абрикос",5);
-        Product product6 = new Product("Вишня",6);
-        Product product7 = new Product("Клубника",7);
-        Product product8 = new Product("Груша",8);
-        Product product9 = new Product("Апельсин",9);
+        Product product3 = new Product("Виноград", 3);
+        Product product4 = new Product("Слива", 4);
+        Product product5 = new Product("Абрикос", 5);
+        Product product6 = new Product("Вишня", 6);
+        Product product7 = new Product("Клубника", 7);
+        Product product8 = new Product("Груша", 8);
+        Product product9 = new Product("Апельсин", 9);
 
         List<Product> productList = new ArrayList<>();
 
@@ -35,15 +32,18 @@ public class Tusk1 {
         productList.get(1).setProductId(0);
         System.out.println(productList);
 
-        productList = productList.stream()
+        productList.stream()
                 .filter(i -> i.getProductId() != 0)
                 .skip(5)                          // При этом фильтрация и все последующие опреации должны выполняться с 5 продукта в коллекции
                 .sorted(new Compar())               //   В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
                 .distinct()                        //  В этой же цепочке вызовов методов удалите все дубликаты.
-                .forEach((Product)-> )    // -- не пониаю как использовать в данной ситуции стринг билдер
-                //.forEach(Consumer<StringBuilder>)
-                .collect(Collectors.toList());
+                .forEach((p) -> {// -- не пониаю как использовать в данной ситуции стринг билдер
+                    StringBuilder f = new StringBuilder(p.getName());
+                    System.out.println(f.reverse());
+                });
         System.out.println(productList);
     }
-
 }
+
+
+

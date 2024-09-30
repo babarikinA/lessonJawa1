@@ -20,29 +20,22 @@ public class Tusk3 {
         productList.add(product3);
         productList.add(product4);
 
-       String first = productList.get(0).getName();
-       System.out.println(first);
+        String first = productList.get(0).getName();
+        System.out.println(first);
 
-       int last = productList.size();
-       System.out.println(last);
+        int last = productList.size();
+        System.out.println(last);
 
-       productList.get(4).setName(first);
-       System.out.println(productList.get(4));
+        productList.get(4).setName(first);
+        System.out.println(productList.get(4));
 
         Optional<Product> prod = productList.parallelStream().findAny();// сделать паралельным стримом
         Product x = prod.orElse(new Product("Манго", 5));
         System.out.println(x);
 
         Optional<Product> prod1 = productList.stream().findFirst();
-        Product pro = prod1.orElseThrow(()-> new RuntimeException("error"));
+        Product pro = prod1.orElseThrow(() -> new RuntimeException("error"));
         System.out.println(pro);
-
-
-
-
-
-
-
 
 
     }

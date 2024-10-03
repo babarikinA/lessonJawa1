@@ -3,12 +3,11 @@ import home.variant3.HeavyBox;
 
 import java.util.ArrayDeque;
 import java.util.List;
+import java.util.function.Consumer;
 
 public interface IBox {
 
         double removeBox(ArrayDeque<HeavyBox> heavyBox);
-
-
 
 
         // queue?? -ochered?

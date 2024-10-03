@@ -39,7 +39,7 @@ public class Tusk2 {
                 .distinct()                         //          В этой же цепочке вызовов методов удалите все дубликаты.
                 .sorted(new Compar())              //           В этой же цепочке вызовов методов выполнить сортировку имени проектов по возрастанию.
                 .collect(Collectors.toList());
-        System.out.println(productList);
+        System.out.println(productList);// done
     }
 
 }

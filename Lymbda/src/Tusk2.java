@@ -14,22 +14,21 @@ public class Tusk2 {
         heavyBox.offer(new HeavyBox(400));
         heavyBox.offer(new HeavyBox(500));
 
-        IBox removeBox = (HeavyBox) -> HeavyBox.getFirst().getWeight();
-        System.out.println(removeBox);
+        IBox boxRemover = (ArrayDeque<HeavyBox> b) ->
 
-      //  Consumer<IBox> boxConsumer = iBox -> iBox.removeBox(heavyBox.poll().toString());
-      //  System.out.println(boxConsumer);
+                b.poll().getWeight();
 
-       // heavyBox.poll();
 
-        System.out.println(heavyBox);
+        System.out.println(boxRemover);
+
+
+
+
+        // heavyBox.poll();
+
 
     }
 
-
 }
-
-
-//  Consumer<HeavyBox> heavyBoxConsumer = heavyBox -> removeBox(removeBox(heavyBox));
 
 

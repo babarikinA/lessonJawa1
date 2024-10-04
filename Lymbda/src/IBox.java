@@ -10,7 +10,8 @@ public interface IBox {
         double removeBox(ArrayDeque<HeavyBox> heavyBox);
 
 
-        // queue?? -ochered?
+
+    // queue?? -ochered?
 
         // потоки через экран внутри класс
         // посмотреть метод оффер - arrayDeque??

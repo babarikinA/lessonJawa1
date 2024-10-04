@@ -1,7 +1,6 @@
 import home.variant3.HeavyBox;
 
 import java.util.ArrayDeque;
-import java.util.function.Consumer;
 
 public class Tusk2 {
 
@@ -14,19 +13,13 @@ public class Tusk2 {
         heavyBox.offer(new HeavyBox(400));
         heavyBox.offer(new HeavyBox(500));
 
-        IBox boxRemover = (ArrayDeque<HeavyBox> b) ->
-
-                b.poll().getWeight();
-
-
-        System.out.println(boxRemover);
-
-
-
-
-        // heavyBox.poll();
-
-
+        IBox boxRemover = (boxes) -> {
+            for (HeavyBox heavyBox1 : boxes) {
+                boxes.poll();
+            }
+        };
+        boxRemover.removeBox(heavyBox);
+        System.out.println(heavyBox);
     }
 
 }

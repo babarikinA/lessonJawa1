@@ -23,10 +23,10 @@ public class Tusk3 {
         String first = productList.get(0).getName();
         System.out.println(first);
 
-        int last = productList.size();
+        int last = productList.size()-1;
         System.out.println(last);
 
-        productList.get(4).setName(first);
+        productList.get(last).setName(first);
         System.out.println(productList.get(4));
 
         Optional<Product> prod = productList.parallelStream().findAny();// сделать паралельным стримом

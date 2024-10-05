@@ -23,7 +23,7 @@ public class Tusk3 {
         String first = productList.get(0).getName();
         System.out.println(first);
 
-        int last = productList.size()-1;
+        int last = productList.size() - 1;
         System.out.println(last);
 
         productList.get(last).setName(first);
@@ -34,7 +34,7 @@ public class Tusk3 {
         System.out.println(x);
 
         Optional<Product> prod1 = productList.stream().findFirst();
-        Product pro = prod1.orElseThrow( () -> new OhException("error!!"));
+        Product pro = prod1.orElseThrow(() -> new OhException("error!!"));
         System.out.println(pro);
 
 

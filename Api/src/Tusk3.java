@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class Tusk3 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws OhException {
 
         Product product = new Product("Яблоко", 0);
         Product product1 = new Product("Банан", 1);
@@ -34,7 +34,7 @@ public class Tusk3 {
         System.out.println(x);
 
         Optional<Product> prod1 = productList.stream().findFirst();
-        Product pro = prod1.orElseThrow(() -> new RuntimeException("error"));
+        Product pro = prod1.orElseThrow( () -> new OhException("error!!"));
         System.out.println(pro);
 
 

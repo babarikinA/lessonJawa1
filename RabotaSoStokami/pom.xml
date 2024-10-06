@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Api</artifactId>
+    <artifactId>RabotaSoStokami</artifactId>
     <packaging>jar</packaging>
 
-    <name>Api</name>
+    <name>RabotaSoStokami</name>
     <url>http://maven.apache.org</url>
 
     <properties>

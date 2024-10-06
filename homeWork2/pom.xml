@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Api</artifactId>
+    <artifactId>homeWork2</artifactId>
     <packaging>jar</packaging>
 
-    <name>Api</name>
+    <name>homeWork2</name>
     <url>http://maven.apache.org</url>
 
     <properties>

@@ -11,6 +11,18 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>Api</module>
+    <module>day2</module>
+    <module>Flowers</module>
+    <module>homeWork2</module>
+    <module>homeWorkKollection</module>
+    <module>HomeworkMassive</module>
+    <module>Interface2</module>
+    <module>interHome</module>
+    <module>lesson2-3</module>
+    <module>Lymbda</module>
+    <module>Potoki</module>
+    <module>rabotaSfailami</module>
+    <module>RabotaSoStokami</module>
   </modules>
 
   <properties>

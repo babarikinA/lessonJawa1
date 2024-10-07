@@ -11,7 +11,6 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>Api</module>
-    <module>day2</module>
     <module>Flowers</module>
     <module>homeWork2</module>
     <module>homeWorkKollection</module>
@@ -30,6 +29,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>

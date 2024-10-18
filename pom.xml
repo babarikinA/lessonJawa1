@@ -22,6 +22,7 @@
     <module>Potoki</module>
     <module>rabotaSfailami</module>
     <module>RabotaSoStokami</module>
+      <module>Selenium</module>
   </modules>
 
   <properties>

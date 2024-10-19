@@ -1,5 +1,3 @@
-package automatization;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -18,11 +16,6 @@ public class TestClass {
         options.addArguments("--remote-allow-origins=*");
     }
 
-    @AfterAll
-    static void exitProgram() {
-
-    }
-
     @BeforeEach
     void openBrowser() {
         driver = new ChromeDriver(options);//на каждый тест новое открытие браузера!бест практис!
@@ -36,8 +29,8 @@ public class TestClass {
 
     @Test
     void openBrowserTest() {
-        // MainPage mainPage = new MainPage(driver);
-        //mainPage.openUrl();
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openUrl("https://ru.selenide.org/index.html");
 
         driver.get("https://ru.selenide.org/index.html");
 

@@ -8,7 +8,7 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public void openUrl(String url){
+    public void openUrl(String url) {
         driver.get(url);
     }
 

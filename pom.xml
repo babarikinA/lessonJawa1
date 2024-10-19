@@ -1,49 +1,49 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>automatization</groupId>
-  <artifactId>lessonJawa1</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <groupId>automatization</groupId>
+    <artifactId>lessonJawa1</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-  <name>lessonJawa1</name>
-  <url>http://maven.apache.org</url>
-  <modules>
-    <module>Api</module>
-    <module>Flowers</module>
-    <module>homeWork2</module>
-    <module>homeWorkKollection</module>
-    <module>HomeworkMassive</module>
-    <module>Interface2</module>
-    <module>interHome</module>
-    <module>lesson2-3</module>
-    <module>Lymbda</module>
-    <module>Potoki</module>
-    <module>rabotaSfailami</module>
-    <module>RabotaSoStokami</module>
-      <module>Selenium</module>
-  </modules>
+    <name>lessonJawa1</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>Api</module>
+        <module>Flowers</module>
+        <module>homeWork2</module>
+        <module>homeWorkKollection</module>
+        <module>HomeworkMassive</module>
+        <module>Interface2</module>
+        <module>interHome</module>
+        <module>lesson2-3</module>
+        <module>Lymbda</module>
+        <module>Potoki</module>
+        <module>rabotaSfailami</module>
+        <module>RabotaSoStokami</module>
+        <module>Selenium</module>
+    </modules>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.10.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.7.0</version>
-    </dependency>
-  </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.13.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+    </dependencies>
 </project>

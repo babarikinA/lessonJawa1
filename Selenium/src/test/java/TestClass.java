@@ -8,7 +8,6 @@ public class TestClass {
 
     private static ChromeOptions options;
     private WebDriver driver;
-    private boolean v;
 
     @BeforeAll
     static void downloadDriver() {
@@ -32,27 +31,16 @@ public class TestClass {
     void openBrowserTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl("https://ru.selenide.org/index.html");
-
         driver.get("https://ru.selenide.org/index.html");
-
         Assertions.assertEquals("https://ru.selenide.org/index.html", driver.getCurrentUrl());
-
     }
 
     @Test
     void openBrowserMistakeTest() {
-
         try {
-
-            System.out.println("Lesson java exception is called");
-
-        Assertions.assertEquals("https://ru.selende.org/index.html", driver.getCurrentUrl());
-
-        }finally {
-
+            Assertions.assertEquals("https://ru.selende.org/index.html", driver.getCurrentUrl());
+        } finally {
             Assertions.assertEquals("https://ru.selenide.org/index.html", driver.getCurrentUrl());
-
         }
-
     }
 }

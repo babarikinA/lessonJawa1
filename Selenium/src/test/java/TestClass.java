@@ -8,6 +8,7 @@ public class TestClass {
 
     private static ChromeOptions options;
     private WebDriver driver;
+    private boolean v;
 
     @BeforeAll
     static void downloadDriver() {
@@ -35,6 +36,28 @@ public class TestClass {
         driver.get("https://ru.selenide.org/index.html");
 
         Assertions.assertEquals("https://ru.selenide.org/index.html", driver.getCurrentUrl());
+
+    }
+
+    @Test
+    void openBrowserMistakeTest() throws MistakeTestException {
+
+        try {
+            throw new MistakeTestException();
+        } catch (MistakeTestException A) {
+            System.out.println("Lesson java exception is called");
+
+        driver.get("https://ru.selenide.org/index.html");
+
+        Assertions.assertEquals("https://ru.selende.org/index.html", driver.getCurrentUrl());
+
+            throw new MistakeTestException("This is error is shown when you set wrong value");
+
+        }finally {
+
+            Assertions.assertEquals("https://ru.selenide.org/index.html", driver.getCurrentUrl());
+
+        }
 
     }
 }

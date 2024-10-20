@@ -40,18 +40,13 @@ public class TestClass {
     }
 
     @Test
-    void openBrowserMistakeTest() throws MistakeTestException {
+    void openBrowserMistakeTest() {
 
         try {
-            throw new MistakeTestException();
-        } catch (MistakeTestException A) {
+
             System.out.println("Lesson java exception is called");
 
-        driver.get("https://ru.selenide.org/index.html");
-
         Assertions.assertEquals("https://ru.selende.org/index.html", driver.getCurrentUrl());
-
-            throw new MistakeTestException("This is error is shown when you set wrong value");
 
         }finally {
 

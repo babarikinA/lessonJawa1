@@ -1,6 +1,5 @@
 package automatization;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -19,10 +18,6 @@ public class HomeTask {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
         File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
-        XmlHandler handler = new XmlHandler();
-        parser.parse(file, handler);
-
-
     }
 
     @Test
@@ -36,5 +31,4 @@ public class HomeTask {
         Element rootElement = document.getDocumentElement();
         System.out.println(rootElement);
     }
-
 }

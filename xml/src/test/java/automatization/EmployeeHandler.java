@@ -17,12 +17,12 @@ public class EmployeeHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if (qName.equals("employee")){
+        if (qName.equals("employee")) {
             String name = attributes.getValue("name");
             String job = attributes.getValue("job");
             String url = attributes.getValue("companySite");
             employees.add(new Employee(name, job, url));
-         }
+        }
     }
 
     @Override

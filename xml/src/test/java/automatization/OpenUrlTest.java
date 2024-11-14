@@ -5,8 +5,17 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.io.File;
+import java.io.IOException;
 
 public class OpenUrlTest {
+
+    private static final String rootPath = System.getProperty("user.dir");
 
     private static ChromeOptions options;
     private WebDriver driver;
@@ -30,18 +39,56 @@ public class OpenUrlTest {
     }
 
     @Test
-    void openBrowserMistakeTest() {
-        ItransPage itransPage = new ItransPage();
-        itransPage = itransPage.openUrl(driver.getCurrentUrl());
-        itransPage.openUrl(driver.getCurrentUrl());
-        Assertions.assertEquals("https://www.itransition.com/", driver.getCurrentUrl());
+    void openBrowserItTest() throws ParserConfigurationException, SAXException, IOException {
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser parser = factory.newSAXParser();
+        File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
+        EmployeeHandler handler = new EmployeeHandler();
+        parser.parse(file, handler);
 
+        String firstUrl = handler.getEmployees().get(0).getUrl();
+        driver.get(firstUrl);
 
-      //  ItrasitionPage itransionPage = new ItrasitionPage();
-      //  itransionPage = itransionPage .openUrl(сюда передаём спрашеный url сотрудника);
-      //   Assertion.assertEquls("https://www.itransition.com/",  driver.getCurrentUrl);
-      //   Assertion.assertInstanceOf(ItransitionPage.class, itransionPage)
+        ItransPage itransPage = new ItransPage(driver);
+        itransPage = itransPage.openUrl(firstUrl);
 
+        Assertions.assertEquals(firstUrl, driver.getCurrentUrl());
+        Assertions.assertInstanceOf(ItransPage.class, itransPage);
     }
 
+    @Test
+    void openBrowserWgTest() throws ParserConfigurationException, SAXException, IOException {
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser parser = factory.newSAXParser();
+        File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
+        EmployeeHandler handler = new EmployeeHandler();
+        parser.parse(file, handler);
+
+        String wgUrl = handler.getEmployees().get(2).getUrl();
+        driver.get(wgUrl);
+
+        WgPage wgPage = new WgPage(driver);
+        wgPage = wgPage.openUrl(wgUrl);
+
+        Assertions.assertEquals(wgUrl, driver.getCurrentUrl());
+        Assertions.assertInstanceOf(WgPage.class, wgPage);
+    }
+
+    @Test
+    void openBrowserEpaTest() throws ParserConfigurationException, SAXException, IOException {
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser parser = factory.newSAXParser();
+        File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
+        EmployeeHandler handler = new EmployeeHandler();
+        parser.parse(file, handler);
+
+        String epamUrl = handler.getEmployees().get(1).getUrl();
+        driver.get(epamUrl);
+
+        EpamPage epPage = new EpamPage(driver);
+        epPage = epPage.openUrl(epamUrl);
+
+        Assertions.assertEquals(epamUrl, driver.getCurrentUrl());
+        Assertions.assertInstanceOf(EpamPage.class, epPage);
+    }
 }

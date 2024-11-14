@@ -23,8 +23,8 @@ public class Tusk1 {
         parser.parse(file, handler);
 
         int sizeArray = handler.getEmployees().size();
-        String jobS = handler.getEmployees().get(sizeArray-2).getJob();
-        String jobF = handler.getEmployees().get(sizeArray-1).getJob();
+        String jobS = handler.getEmployees().get(sizeArray - 2).getJob();
+        String jobF = handler.getEmployees().get(sizeArray - 1).getJob();
 
         Assertions.assertNotEquals(jobS, jobF);
 

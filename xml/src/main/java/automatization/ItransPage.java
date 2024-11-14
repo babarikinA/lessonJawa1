@@ -10,10 +10,6 @@ public class ItransPage implements Action<ItransPage>{
         this.driver = driver;
     }
 
-    public ItransPage() {
-
-    }
-
     @Override
     public ItransPage openUrl(String url) {
         driver.get(url);

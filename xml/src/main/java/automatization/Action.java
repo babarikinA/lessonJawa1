@@ -1,8 +1,6 @@
 package automatization;
 
 
-public interface Action <T> {
-
+public interface Action<T> {
     T openUrl(String url);
-
 }

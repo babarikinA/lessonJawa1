@@ -2,12 +2,14 @@ package automatization;
 
 public class Employee {
 
-private String name;
-private String job;
-private String url;
+    private final String name;
+    private final String job;
+    private final String url;
 
-    public String getName() {
-        return name;
+    public Employee(String name, String job, String url) {
+        this.name = name;
+        this.job = job;
+        this.url = url;
     }
 
     public String getJob() {
@@ -25,11 +27,5 @@ private String url;
                 ", job='" + job + '\'' +
                 ", url='" + url + '\'' +
                 '}';
-    }
-
-    public Employee(String name, String job, String url) {
-        this.name = name;
-        this.job = job;
-        this.url = url;
     }
 }

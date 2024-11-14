@@ -1,10 +1,7 @@
 package automatization;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -34,7 +31,16 @@ public class OpenUrlTest {
 
     @Test
     void openBrowserMistakeTest() {
-        driver.get("https://www.itransition.com/");
+        ItransPage itransPage = new ItransPage();
+        itransPage = itransPage.openUrl(driver.getCurrentUrl());
+        itransPage.openUrl(driver.getCurrentUrl());
+        Assertions.assertEquals("https://www.itransition.com/", driver.getCurrentUrl());
+
+
+      //  ItrasitionPage itransionPage = new ItrasitionPage();
+      //  itransionPage = itransionPage .openUrl(сюда передаём спрашеный url сотрудника);
+      //   Assertion.assertEquls("https://www.itransition.com/",  driver.getCurrentUrl);
+      //   Assertion.assertInstanceOf(ItransitionPage.class, itransionPage)
 
     }
 

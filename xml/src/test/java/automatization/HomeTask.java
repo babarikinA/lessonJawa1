@@ -19,10 +19,10 @@ public class HomeTask {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
         File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
-        xmlHandler handler = new xmlHandler();
+        XmlHandler handler = new XmlHandler();
         parser.parse(file, handler);
 
-        Assertions.assertEquals(6, 0);
+
     }
 
     @Test

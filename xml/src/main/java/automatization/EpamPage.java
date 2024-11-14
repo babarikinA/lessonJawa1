@@ -13,7 +13,7 @@ public class EpamPage implements Action<EpamPage> {
 
     @Override
     public EpamPage openUrl(String url) {
-        driver.get("https://www.itransition.com/");
+        driver.get(url);
         return this;
     }
 }

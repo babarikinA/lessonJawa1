@@ -2,7 +2,7 @@ package automatization;
 
 import org.openqa.selenium.WebDriver;
 
-public class ItransPage implements Action<ItransPage>{
+public class ItransPage implements Action<ItransPage> {
 
     private WebDriver driver;
 

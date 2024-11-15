@@ -2,9 +2,9 @@ package automatization;
 
 public class Employee {
 
-    private final String name;
-    private final String job;
-    private final String url;
+    private String name;
+    private String job;
+    private String url;
 
     public Employee(String name, String job, String url) {
         this.name = name;

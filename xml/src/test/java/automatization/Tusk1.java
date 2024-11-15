@@ -3,7 +3,8 @@ package automatization;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -31,25 +32,38 @@ public class Tusk1 {
     }
 
     @Test
-    void example2 () throws ParserConfigurationException, IOException, SAXException {
+    void example2() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
         Document document = builder.parse(file);
 
         NodeList element = document.getElementsByTagName("employee");
-        int lastEmployee = element.getLength()-1;
-        int secondEmployee = element.getLength()-2;
-        int firstEmployee = element.getLength()-3;
+        int lastEmployee = element.getLength() - 1;
 
         String job = element.item(lastEmployee).getAttributes().item(1).getNodeValue();
-        String name = element.item(lastEmployee).getAttributes().item(2).getNodeValue();
-        String url = element.item(lastEmployee).getAttributes().item(0).getNodeValue();
-        System.out.println(job);
-        System.out.println(name);
-        System.out.println(url);
+        Assertions.assertEquals("Senior", job);
+    }
 
-        Assertions.assertEquals("Senior",job);
+    @Test
+    void example3() throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        File file = new File(rootPath + "/src/test/java/automatization/employee.xml");
+        Document document = builder.parse(file);
 
+        NodeList element = document.getElementsByTagName("employee");
+
+        Node lastEmployee = element.item(element.getLength() - 1);
+        NamedNodeMap attributes = lastEmployee.getAttributes();
+
+        for (int i = 0; i < attributes.getLength(); i++) {
+            if (attributes.item(i).getNodeName().equals("job")) {
+                String nameEmployee = attributes.item(i).getNodeValue();
+
+                Assertions.assertEquals("Senior", nameEmployee);
+                break;
+            }
+        }
     }
 }

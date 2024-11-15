@@ -1,7 +1,6 @@
 package automatization;
 
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
@@ -16,16 +15,12 @@ public class EmployeeHandler extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) {
         if (qName.equals("employee")) {
             String name = attributes.getValue("name");
             String job = attributes.getValue("job");
             String url = attributes.getValue("companySite");
             employees.add(new Employee(name, job, url));
         }
-    }
-
-    @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
     }
 }

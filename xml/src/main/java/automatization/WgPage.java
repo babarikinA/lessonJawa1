@@ -2,7 +2,7 @@ package automatization;
 
 import org.openqa.selenium.WebDriver;
 
-public class WgPage implements Action <WgPage>{
+public class WgPage implements Action<WgPage> {
 
     private WebDriver driver;
 

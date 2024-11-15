@@ -23,6 +23,7 @@
         <module>rabotaSfailami</module>
         <module>RabotaSoStokami</module>
         <module>Selenium</module>
+        <module>xml</module>
     </modules>
 
     <properties>

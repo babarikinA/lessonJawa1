@@ -24,6 +24,7 @@
         <module>RabotaSoStokami</module>
         <module>Selenium</module>
         <module>xml</module>
+        <module>html</module>
     </modules>
 
     <properties>

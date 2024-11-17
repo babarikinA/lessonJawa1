@@ -14,6 +14,13 @@ public class HomeTusk1 {
     private static ChromeOptions options;
     private WebDriver driver;
 
+    private static final By locatorNotes = By.xpath("//input[@name='notes']");
+    private static final By commentLocator = By.xpath("//input[@name='comment']");
+    private static final By passwordLocator = By.xpath("//input[@name='password']");
+    private static final By loginLocator = By.xpath("//input[@name='login']");
+
+
+
     @BeforeAll
     static void downloadDriver() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
@@ -35,15 +42,10 @@ public class HomeTusk1 {
     void getUrlAndWriteAllFieldsTest() {
         driver.get(url);
 
-        By loginLocator = By.xpath("//input[@name='login']");
-        By passwordLocator = By.xpath("//input[@name='password']");
-        By commentLocator = By.xpath("//input[@name='comment']");
-        By notesLocator = By.xpath("//input[@name='notes']");
-
         WebElement loginField = driver.findElement(loginLocator);
         WebElement passwordField = driver.findElement(passwordLocator);
         WebElement commentField = driver.findElement(commentLocator);
-        WebElement notesField = driver.findElement(notesLocator);
+        WebElement notesField = driver.findElement(locatorNotes);
 
         loginField.sendKeys("testing1");
         passwordField.sendKeys("testing2");
@@ -65,24 +67,19 @@ public class HomeTusk1 {
     void getUrlWriteAllCheckBoxAndPenultimateFieldTest() {
         driver.get(url);
 
-        By passwordLocator = By.xpath("//input[@name='password']");
-        By notesLocator = By.xpath("//input[@name='notes']");
         By checkBoxSmsLocator = By.xpath("//label[@id='1']");
 
         WebElement passwordField = driver.findElement(passwordLocator);
-        WebElement notesField = driver.findElement(notesLocator);
+        WebElement notesField = driver.findElement(locatorNotes);
         WebElement smsCheckBox = driver.findElement(checkBoxSmsLocator);
 
-        passwordField.sendKeys("testing2");
-        notesField.sendKeys("testing4");
-
-        String passwordActualResult = passwordField.getDomProperty("value");
-        String notesActualResult = notesField.getDomProperty("value");
+        String passwordActualResult = passwordField.getText();
+        String notesActualResult = notesField.getText();
         String smsActualResult = smsCheckBox.getText();
         String currentTitle = driver.getTitle();
 
-        Assertions.assertEquals("testing2", passwordActualResult);
-        Assertions.assertEquals("testing4", notesActualResult);
+        Assertions.assertEquals("Поле для пароля", passwordActualResult);
+        Assertions.assertEquals("Поле для комментария", notesActualResult);
         Assertions.assertEquals("Согласен на смс оповещения", smsActualResult);
         Assertions.assertEquals("Home Work Html Variant1", currentTitle);
     }
@@ -91,24 +88,39 @@ public class HomeTusk1 {
     void getUrlWriteSecondCheckBoxAndLastFieldTest() {
         driver.get(url);
 
-        By notesLocator = By.xpath("//input[@name='notes']");
-        WebElement notesField = driver.findElement(notesLocator);
+        WebElement notesField = driver.findElement(locatorNotes);
+        WebElement loginField = driver.findElement(loginLocator);
+        WebElement passwordField = driver.findElement(passwordLocator);
+        WebElement commentField = driver.findElement(commentLocator);
+
         notesField.sendKeys("testing4");
+
         String notesActualResult = notesField.getDomProperty("value");
+        String loginActualResult = loginField.getDomProperty("value");
+        String passwordActualResult = passwordField.getDomProperty("value");
+        String commentActualResult = commentField.getDomProperty("value");
+
         Assertions.assertEquals("testing4", notesActualResult);
+        Assertions.assertEquals("", loginActualResult);
+        Assertions.assertEquals("", passwordActualResult);
+        Assertions.assertEquals("", commentActualResult);
 
         By rememberCheckBoxLocator = By.xpath("//input[@name='checkbox2']");
         WebElement rememberBox = driver.findElement(rememberCheckBoxLocator);
         rememberBox.click();
         boolean selected = rememberBox.isSelected();
+
+        By rememberCheckBoxLocator1 = By.xpath("//input[@name='checkbox1']");
+        WebElement rememberBox1 = driver.findElement(rememberCheckBoxLocator1);
+        boolean selected1 = rememberBox1.isSelected();
+
         Assertions.assertTrue(selected);
+        Assertions.assertFalse(selected1);
 
         By rememberGoogleLocator = By.xpath("//input[@class]");
         WebElement rememberUrl = driver.findElement(rememberGoogleLocator);
         rememberUrl.click();
         String newUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://www.google.com/", newUrl);
-        //xpected :https://www.google.com/
-        //Actual   :https://www.google.com/?login=&password=&comment=&notes=testing4&checkbox2=on
     }
 }

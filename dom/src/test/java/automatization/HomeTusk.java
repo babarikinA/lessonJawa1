@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.List;
+
 public class HomeTusk {
 
     private static ChromeOptions options;
@@ -90,7 +92,11 @@ public class HomeTusk {
         pressMethodAndTools.click();
         switchToTab(driver);
 
-        // Assertions.assertEquals(11, );-- Проверить что элементов 11
+        By locatorNavBarMenu = By.xpath("//div[@id='styletwo']//li");
+        List<WebElement> elements = driver.findElements(locatorNavBarMenu);
+        int pynkts = elements.size();
+        Assertions.assertEquals(11, pynkts);
+
         // - Проверить, что текущий url https://www.methodsandtools.com/tools/selenide.php
         String curUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://www.methodsandtools.com/tools/selenide.php", curUrl);

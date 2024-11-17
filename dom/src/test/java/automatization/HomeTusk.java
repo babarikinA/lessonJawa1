@@ -90,7 +90,7 @@ public class HomeTusk {
         pressMethodAndTools.click();
         switchToTab(driver);
 
-        // Assertions.assertEquals(11, );-- Проверить что элементов 11
+        // Assertions.assertEquals(11, );-- Проверить что элементов 11 
         // - Проверить, что текущий url https://www.methodsandtools.com/tools/selenide.php
         String curUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://www.methodsandtools.com/tools/selenide.php", curUrl);

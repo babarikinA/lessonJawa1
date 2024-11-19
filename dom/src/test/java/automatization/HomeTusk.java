@@ -13,6 +13,7 @@ import java.util.List;
 
 public class HomeTusk {
 
+    private static final String url = "https://selenide.org/";
     private static ChromeOptions options;
     private WebDriver driver;
 
@@ -36,7 +37,7 @@ public class HomeTusk {
 
     @Test
     void openBrowserItTest() {
-        driver.get("https://selenide.org/");
+        driver.get(url);
         By imageLocator = By.xpath("//img[@src='/images/selenide-logo-big.png']");
         WebElement kartinka = driver.findElement(imageLocator);
         String src = kartinka.getAttribute("src");
@@ -48,7 +49,7 @@ public class HomeTusk {
 
     @Test
     void tuskOpen2() {
-        driver.get("https://selenide.org/");
+        driver.get(url);
         By docsLocator = By.xpath("//header//a[@href='/documentation.html']");
         WebElement pressDocs = driver.findElement(docsLocator);
         pressDocs.click();
@@ -65,18 +66,15 @@ public class HomeTusk {
 
         By motivationLocator = By.xpath("//h2[@id='motivation']");
         WebElement viewMotivation = driver.findElement(motivationLocator);
-        String seeMotivation = viewMotivation.getAttribute("id");
-        boolean iCanSee = seeMotivation.contains("motivation");
-        Assertions.assertTrue(iCanSee);
+        Assertions.assertTrue(viewMotivation.isDisplayed());
 
         String curUrl = driver.getCurrentUrl();
-
         Assertions.assertEquals("https://selenide.org/documentation/selenide-vs-selenium.html", curUrl);
     }
 
     @Test
     void tusk3() {
-        driver.get("https://selenide.org/");
+        driver.get(url);
         By docsLocator = By.xpath("//header//a[@href='/documentation.html']");
         WebElement pressDocs = driver.findElement(docsLocator);
         pressDocs.click();
@@ -87,7 +85,7 @@ public class HomeTusk {
         actions.moveToElement(splitterLoc);
         actions.perform();
 
-        By methodAndToolsLocator = By.xpath("//a[@href='/documentation/selenide-vs-selenium.html']");
+        By methodAndToolsLocator = By.xpath("//a[@href='https://www.methodsandtools.com/tools/selenide.php']");
         WebElement pressMethodAndTools = driver.findElement(methodAndToolsLocator);
         pressMethodAndTools.click();
         switchToTab(driver);
@@ -97,7 +95,6 @@ public class HomeTusk {
         int pynkts = elements.size();
         Assertions.assertEquals(11, pynkts);
 
-        // - Проверить, что текущий url https://www.methodsandtools.com/tools/selenide.php
         String curUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://www.methodsandtools.com/tools/selenide.php", curUrl);
     }

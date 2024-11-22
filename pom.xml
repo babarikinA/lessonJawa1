@@ -25,6 +25,7 @@
         <module>Selenium</module>
         <module>xml</module>
         <module>html</module>
+        <module>webDriver</module>
     </modules>
 
     <properties>

@@ -5,11 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class TuskWebEl {
 
     private static ChromeOptions options;
-    private static String url = "https://www.jetbrains.com/";
+    private static final String url = "https://www.jetbrains.com/";
     private WebDriver driver;
 
     @BeforeAll
@@ -31,11 +35,13 @@ public class TuskWebEl {
     }
 
     @Test
-    void Tusk1Test() throws InterruptedException {
+    void Tusk1Test() {
+        driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
-        Thread.sleep(5000);
-        WebElement cookie = driver.findElement(coockieLocator);
-        cookie.click();
+
+        WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(60))
+                .until(ExpectedConditions.visibilityOfElementLocated(coockieLocator));
+        floatButton.click();
 
         By developerToolsLocator = By.xpath("//button[@aria-label='Developer Tools: Open submenu']");
         WebElement tools = driver.findElement(developerToolsLocator);
@@ -45,21 +51,19 @@ public class TuskWebEl {
         WebElement writerSideButton = driver.findElement(writerSideLocator);
         writerSideButton.click();
 
-        //
-        By sdkText = By.xpath("SDK docs");
-        Thread.sleep(10000);
-        WebElement viewSdkText = driver.findElement(sdkText);
-        boolean sdc = viewSdkText.isDisplayed();
-        Assertions.assertTrue(sdc);
+        By sdkText = By.xpath("//span[@class='animated-list__item animated-list__item_shown']");
+        WebDriverWait sdk = new WebDriverWait(driver, Duration.ofSeconds(60));
+
+        Assertions.assertTrue(sdk.until(ExpectedConditions.textToBe(sdkText, "SDK docs"))); // Сделал, но не разобрался в логике!!
     }
 
     @Test
-    void Tusk2Test() throws InterruptedException {
+    void Tusk2Test() {
         driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
-        Thread.sleep(5000);
-        WebElement cookie = driver.findElement(coockieLocator);
-        cookie.click();
+        WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(coockieLocator));
+        floatButton.click();
 
         By developerToolsLocator = By.xpath("//button[@aria-label='Developer Tools: Open submenu']");
         WebElement tools = driver.findElement(developerToolsLocator);
@@ -75,8 +79,11 @@ public class TuskWebEl {
 
         By youTubeTitleLocator = By.xpath("//a[@data-sessionlink='feature=player-title']");
 
-        WebElement iFrame = driver.findElement(By.xpath("//a[@data-sessionlink='feature=player-title']"));
-        driver.switchTo().frame(iFrame);
+      //  - Нажмите кнопку 'Play' (На скрине img_5 вы под пунктом 1 элемент из этого шага).
+      //  - Проверить, что заголовок видео 'Getting Started With Writerside' виден (На скрине img_2 вы найдёте под пунктом 1 элемент из этого шага).
+
+       // WebElement iFrame = driver.findElement(By.xpath("//a[@data-sessionlink='feature=player-title']"));
+        //driver.switchTo().frame(iFrame);
 
         WebElement viewTitle = driver.findElement(youTubeTitleLocator);
         String seeTitle = viewTitle.getText();
@@ -85,7 +92,7 @@ public class TuskWebEl {
     }
 
     @Test
-    void Tusk3Test() throws InterruptedException {
+    void tusk3Test() throws InterruptedException {
         driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
         Thread.sleep(5000);

@@ -35,11 +35,11 @@ public class TuskWebEl {
     }
 
     @Test
-    void Tusk1Test() {
+    void tuskSdkViewTest() {
         driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
 
-        WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(60))
+        WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(coockieLocator));
         floatButton.click();
 
@@ -52,13 +52,13 @@ public class TuskWebEl {
         writerSideButton.click();
 
         By sdkText = By.xpath("//span[@class='animated-list__item animated-list__item_shown']");
-        WebDriverWait sdk = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait sdk = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         Assertions.assertTrue(sdk.until(ExpectedConditions.textToBe(sdkText, "SDK docs"))); // Сделал, но не разобрался в логике!!
     }
 
     @Test
-    void Tusk2Test() {
+    void tuskYouTubeButtonTest() {
         driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
         WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -88,14 +88,12 @@ public class TuskWebEl {
         WebElement viewTitle = driver.findElement(youTubeTitleLocator);
         String seeTitle = viewTitle.getText();
         System.out.println(seeTitle);
-
     }
 
     @Test
-    void tusk3Test() throws InterruptedException {
+    void tuskPyCharmButtonTest() {
         driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
-        Thread.sleep(5000);
         WebElement cookie = driver.findElement(coockieLocator);
         cookie.click();
 

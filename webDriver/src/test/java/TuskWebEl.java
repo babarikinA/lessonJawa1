@@ -102,7 +102,7 @@ public class TuskWebEl {
         WebElement tools = driver.findElement(developerToolsLocator);
         tools.click();
 
-        By payCharmLocator = By.xpath("//a[@href='/pycharm/']//span[@class='rs-text-2 rs-text-2_theme_light _mainSubmenuItem__title_fdawee_1 _mainSubmenuItem__titleWithLogo_fdawee_1']");
+        By payCharmLocator = By.xpath("//div[contains(@class, '_mainMenuItemActive')]//a[@href='/pycharm/']");
         WebElement writerSideButton = driver.findElement(payCharmLocator);
         writerSideButton.click();
 

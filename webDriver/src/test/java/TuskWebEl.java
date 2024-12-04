@@ -12,8 +12,8 @@ import java.time.Duration;
 
 public class TuskWebEl {
 
-    private static ChromeOptions options;
     private static final String url = "https://www.jetbrains.com/";
+    private static ChromeOptions options;
     private WebDriver driver;
 
     @BeforeAll
@@ -74,22 +74,21 @@ public class TuskWebEl {
         writerSideButton.click();
 
         By ByPlayLocator = By.xpath("//button[@data-test='youtube-player-button']");
-        WebElement playButton = driver.findElement(ByPlayLocator);
+        WebElement playButton = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(ByPlayLocator));
         playButton.click();
         playButton.isEnabled();
 
-        By youTubeTitleLocator = By.xpath("//a[@data-sessionlink='feature=player-title']");
+        By iFrameLocator = By.xpath("//iframe [@class='wt-youtube-player__player']");
+        By youTubeTitleLocator = By.xpath("//a[text()='Getting Started With Writerside']");
+        WebElement iFrameSwitch = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(iFrameLocator));
+        driver.switchTo().frame(iFrameSwitch);
 
-
-      //  - Нажмите кнопку 'Play' (На скрине img_5 вы под пунктом 1 элемент из этого шага).
-      //  - Проверить, что заголовок видео 'Getting Started With Writerside' виден (На скрине img_2 вы найдёте под пунктом 1 элемент из этого шага).
-
-       // WebElement iFrame = driver.findElement(By.xpath("//a[@data-sessionlink='feature=player-title']"));
-        //driver.switchTo().frame(iFrame);
-
-       // WebElement viewTitle = driver.findElement(youTubeTitleLocator);
-        //String seeTitle = viewTitle.getText();
-         //System.out.println(seeTitle);
+        WebElement youTubeText = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(youTubeTitleLocator));
+        String title = youTubeText.getText();
+        Assertions.assertEquals("Getting Started With Writerside", title);
     }
 
     @Test
@@ -111,6 +110,7 @@ public class TuskWebEl {
 
         By dizebledButton = By.xpath("//a[@href='/pycharm/download/']");
         WebElement buttonDizebled = driver.findElement(dizebledButton);
-        buttonDizebled.isEnabled();
+        boolean buttonOkay = buttonDizebled.isEnabled();
+        Assertions.assertTrue(buttonOkay);
     }
 }

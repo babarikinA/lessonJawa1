@@ -27,6 +27,7 @@ public class TuskWebEl {
     void setUpDriver() {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+        driver.get(url);
     }
 
     @AfterEach
@@ -36,7 +37,6 @@ public class TuskWebEl {
 
     @Test
     void sdkViewTest() {
-        driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
 
         WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -59,7 +59,6 @@ public class TuskWebEl {
 
     @Test
     void youTubeButtonTest() {
-        driver.get(url);
         By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
         WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(coockieLocator));
@@ -93,19 +92,18 @@ public class TuskWebEl {
 
     @Test
     void pyCharmButtonTest() {
-        driver.get(url);
-        By coockieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
+        By cookieLocator = By.xpath("//button[@data-jetbrains-cookies-banner-action='ACCEPT_ALL']");
 
         WebElement floatButton = new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(coockieLocator));
+                .until(ExpectedConditions.visibilityOfElementLocated(cookieLocator));
         floatButton.click();
 
         By developerToolsLocator = By.xpath("//button[@aria-label='Developer Tools: Open submenu']");
         WebElement tools = driver.findElement(developerToolsLocator);
         tools.click();
 
-        By writerSideLocator = By.xpath("//a[@href='/pycharm/']//span[@class='rs-text-2 rs-text-2_theme_light _mainSubmenuItem__title_fdawee_1 _mainSubmenuItem__titleWithLogo_fdawee_1']");
-        WebElement writerSideButton = driver.findElement(writerSideLocator);
+        By payCharmLocator = By.xpath("//a[@href='/pycharm/']//span[@class='rs-text-2 rs-text-2_theme_light _mainSubmenuItem__title_fdawee_1 _mainSubmenuItem__titleWithLogo_fdawee_1']");
+        WebElement writerSideButton = driver.findElement(payCharmLocator);
         writerSideButton.click();
 
         By dizebledButton = By.xpath("//a[@href='/pycharm/download/']");

@@ -47,7 +47,7 @@ public class TuskWebEl {
         WebElement tools = driver.findElement(developerToolsLocator);
         tools.click();
 
-        By writerSideLocator = By.xpath("//div[contains(@class, '_mainSubmenu__content_')]//a[@href='/writerside/']");
+        By writerSideLocator = By.xpath("//div[contains(@class, '_mainMenuItemActive')]//a[@href='/writerside/']");
         WebElement writerSideButton = driver.findElement(writerSideLocator);
         writerSideButton.click();
 
@@ -68,7 +68,7 @@ public class TuskWebEl {
         WebElement tools = driver.findElement(developerToolsLocator);
         tools.click();
 
-        By writerSideLocator = By.xpath("//div[contains(@class, '_mainSubmenu__content_')]//a[@href='/writerside/']");
+        By writerSideLocator = By.xpath("//div[contains(@class, '_mainMenuItemActive')]//a[@href='/writerside/']");
         WebElement writerSideButton = driver.findElement(writerSideLocator);
         writerSideButton.click();
 

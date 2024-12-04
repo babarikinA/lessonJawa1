@@ -26,6 +26,7 @@
         <module>xml</module>
         <module>dom</module>
         <module>html</module>
+        <module>webDriver</module>
     </modules>
 
     <properties>

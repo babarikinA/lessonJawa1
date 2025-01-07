@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class TuskWebEl {
+public class TuskWebElTest {
 
     private static final String url = "https://www.jetbrains.com/";
     private static ChromeOptions options;

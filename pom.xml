@@ -27,6 +27,7 @@
         <module>dom</module>
         <module>html</module>
         <module>webDriver</module>
+        <module>CucumberHome</module>
     </modules>
 
     <properties>

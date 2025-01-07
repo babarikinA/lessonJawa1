@@ -21,6 +21,7 @@ public class TuskWebElTest {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--headless=new");
     }
 
     @BeforeEach
